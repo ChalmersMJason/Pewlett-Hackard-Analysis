@@ -17,3 +17,28 @@ This analysis has been prepared for Pewlett-Hackard management. The goal of the 
 
 * The company defines the large generation of employees that are nearing retirment age as the "silver tsunami". As the silver tsunami begins to make an impact, the company will need to be filling ~90,400 roles. 
 * The company has ~1,550 employees that are qualified to be mentors for the next generation of PH employees. The company will need to determine if the ratio of mentor eligible to total employees is satisfactory. 
+* The company can use the below query to see the ratio of total employees to mentor eligible employees. The company can use this to determine if they should hire external candidatest that are eligible to mentor:
+
+SELECT 
+  count(emp.emp_no),
+  count(me.emp_no)
+
+  FROM employees as emp
+  FULL JOIN mentorship_eligibility as me
+  ON emp.emp_no = me.emp_no
+
+* If hiring external candidates, the company can use the following query to know what to expect the salary would be for each title:
+
+SELECT 
+	me.title,
+	count(me.emp_no),
+	sum(sal.salary),
+	sum(sal.salary) / count(me.emp_no) 
+	
+
+FROM mentorship_eligibility as me
+LEFT JOIN salaries as sal
+ON me.emp_no = sal.emp_no
+
+GROUP BY 1
+
