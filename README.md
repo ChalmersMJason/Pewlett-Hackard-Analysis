@@ -14,3 +14,6 @@ This analysis has been prepared for Pewlett-Hackard management. The goal of the 
 ![image](https://user-images.githubusercontent.com/85259984/134787928-ce8f5150-16bf-4215-9b9e-b60d15e18c3f.png)
 
 ## Summary
+
+* The company defines the large generation of employees that are nearing retirment age as the "silver tsunami". As the silver tsunami begins to make an impact, the company will need to be filling ~90,400 roles. 
+* The company has ~1,550 employees that are qualified to be mentors for the next generation of PH employees. The company will need to determine if the ratio of mentor eligible to total employees is satisfactory. 
